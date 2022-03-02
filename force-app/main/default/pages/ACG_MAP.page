@@ -1,0 +1,34 @@
+<apex:page lightningStylesheets="true">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+<title>Spotting-inder</title>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<apex:slds />
+<style type="text/css">
+body,html{
+width: 100%;
+height: 100%;
+margin: 0px;
+}
+#map{
+height: 100%;
+width: 100%;
+margin: 0px;
+padding: 200px;
+}
+#location{
+width: 70%;
+}
+</style>
+</head>
+<body>
+<div  class="slds-form-element">
+<!-- <div id="location" class="slds-wrap"></div> -->
+<div id="map"></div><br/>
+</div>
+
+</body>
+</html>
+</apex:page>
