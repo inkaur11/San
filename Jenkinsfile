@@ -22,7 +22,7 @@ pipeline {
                 script {
                         currentBuild.description = "${GIT_BRANCH}"
                         switch("${GIT_BRANCH}") {
-                        case "master":
+                        case "main":
                         FILE_ID = "29d591b3-01be-475c-955c-e52cf61d0461"
                         break
                     }
