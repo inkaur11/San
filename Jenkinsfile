@@ -2,7 +2,7 @@
 pipeline {
     agent any
     parameters {
-        choice(name: 'BRANCH', choices: ['main'], description: 'Branch to deploy')
+        choice(name: 'BRANCH', choices: ['SanTest'], description: 'Branch to deploy')
         choice(name: 'SCOPE', choices: ['Validate', 'Deploy'], description: 'Validate/Deploy metadata')
 	    choice(name: 'COMMITS', choices: ['1', '2', '3', '4', '5','Package'], description: 'Number of commits or package to deploy')
         booleanParam(name: 'PMDALL', defaultValue: false, description: 'Run on all Apex classes')
@@ -22,7 +22,7 @@ pipeline {
                 script {
                         currentBuild.description = "${GIT_BRANCH}"
                         switch("${GIT_BRANCH}") {
-                        case "main":
+                        case "SanTest":
                         FILE_ID = "29d591b3-01be-475c-955c-e52cf61d0461"
                         break
                     }
