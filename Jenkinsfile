@@ -39,17 +39,6 @@ pipeline {
                 }
             }
         }
-        stage('Install SFDX') {
-            steps {
-                echo 'installing SFDX...' 
-                sh """
-                    node -v
-                    npm -v
-                    npm install -g sfdx-cli
-                    sfdx --version
-                """
-            }
-        }
         stage('Deploy') {
             environment {
                 DEPLOYMENT_SCOPE = "-u ${ALIAS} -l ${params.TESTLEVEL}"
