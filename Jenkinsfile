@@ -2,7 +2,7 @@
 pipeline {
     agent any
     parameters {
-        choice(name: 'BRANCH', choices: ['master'], description: 'Branch to deploy')
+        choice(name: 'BRANCH', choices: ['main'], description: 'Branch to deploy')
         choice(name: 'SCOPE', choices: ['Validate', 'Deploy'], description: 'Validate/Deploy metadata')
 	    choice(name: 'COMMITS', choices: ['1', '2', '3', '4', '5','Package'], description: 'Number of commits or package to deploy')
         booleanParam(name: 'PMDALL', defaultValue: false, description: 'Run on all Apex classes')
