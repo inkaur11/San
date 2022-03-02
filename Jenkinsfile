@@ -27,7 +27,7 @@ pipeline {
                         break
                     }
                         configFileProvider([configFile(fileId: "${FILE_ID}", variable: 'JENV')]) {
-                        CONFIG_FILE = readProperties file: "${JENV}"
+                        CONFIG_FILE = readFile : "${JENV}"
 						INSTANCE_URL = CONFIG_FILE['INSTANCE_URL']
                         //CREDENTIALS_ID = CONFIG_FILE['CREDENTIALS_ID']
 			            CLIENT_ID = CONFIG_FILE['CLIENT_ID']
