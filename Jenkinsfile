@@ -67,7 +67,7 @@ pipeline {
 			            echo "printing commiting ${COMMITS_DIFF}"
 			            echo "printing params ${COMMITS_DIFF}${params.COMMITS}"
 			            echo "${Workspace}"
-			            echo "${PWD}"
+			            echo "{PWD}"
 			    
                         FILES_DEPLOYMENT = sh(returnStdout: true, script: "${COMMITS_DIFF}${params.COMMITS} HEAD -- ${PROJECT_DIR} -- :!*package.xml -- !*.eslintrc.json | tr -s '\\n' ',' | sed 's/,\$//; s/.*/\"&\"/g'").trim()
 			            //FILES_DEPLOYMENT = sh(returnStdout: true, script: "${COMMITS_DIFF}${params.COMMITS} HEAD -- ${PROJECT_DIR} -- :!*package.xml -- !*.eslintrc.json").trim()
